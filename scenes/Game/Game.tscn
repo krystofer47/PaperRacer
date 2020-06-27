@@ -24,7 +24,6 @@ collide_with_bodies = false
 script = ExtResource( 4 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="Lap" type="Label" parent="HUD"]

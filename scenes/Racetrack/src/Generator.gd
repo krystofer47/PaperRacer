@@ -44,6 +44,7 @@ static func build(Racetrack, path):
 	#	----------------	#
 	#	Decoration Layer	#
 	#	----------------	#
+	
 	var MappingInformation = Global.JSON_parse(Information["mapping-file"]);
 	var DecorationLayer = Information["decoration"];
 	
@@ -62,6 +63,7 @@ static func build(Racetrack, path):
 				
 static func get_obj(id, mapping):
 	for fixed in mapping["dynamic"]["fixed"]:
-		if int(fixed.id) == id:
-			fixed["class"] = "Fixed";
-			return fixed;
+		match int(fixed.id):
+			1: fixed["class"] = "Fixed";
+			0: fixed["class"] = "None";
+		return fixed;

@@ -83,8 +83,7 @@ func action(driver):
 	var gridNode_selection = $Racetrack.getChoosableGridNodes(driver.getPosition(), vector_selection)
 	if Settings.DEBUG:
 		print("Possible GridNodes: " + str(gridNode_selection))
-
- 	# Falls der Fahrer sich gegen eine Wand fährt darf er anhalten in der Runde.
+	# Falls der Fahrer sich gegen eine Wand fährt darf er anhalten in der Runde.
 	if len(gridNode_selection) == 0:
 		vector_selection = [Vector2(0,0)]
 		gridNode_selection = $Racetrack.getChoosableGridNodes(driver.getPosition(), vector_selection)
